@@ -46,7 +46,12 @@ app.get('/employees', employees.list);
 app.get('/employees/empadd',employees.empadd);
 app.get('/employees/cancel', employees.cancel);
 app.post('/employees/empadd', employees.save);
-app.get('/employees/destroy/:id',employees.destroy);
+
+app.get('/employees/update/:id', employees.update);
+app.post('/employees/update/:id', employees.save_update);
+
+// app.get('/employees/edit/:id',employees.edit_employee);
+// app.get('/employees/delete_employee/:id',employees.delete_employee);
 
 // app.get('/employees/remove/:id', employees.remove_employee);
 // app.get('/employees/change/:id', employees.change);

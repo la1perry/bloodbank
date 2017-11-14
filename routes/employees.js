@@ -12,12 +12,12 @@ exports.empadd=function(req,res){
 
 }
 
-exports.edit_employee=function (req,res){
+exports.update=function (req,res){
     var id=req.params.id;
     req.getConnection(function(err,connection){
        var query= connection.query('SELECT * FROM employees WHERE id=?',[id],function(err,rows){
             if(err)console.log('error',err);
-            res.render('edit_employee',{page_title:"Edit Employee", data:rows})
+            res.render('update_employee',{page_title:"Edit Employee", data:rows});
 
         });
     });
@@ -42,7 +42,7 @@ exports.save=function(req,res){
     });
 };
 
-exports.save_edit = function(req,res){
+exports.save_update = function(req,res){
     
     var input = JSON.parse(JSON.stringify(req.body));
     var id = req.params.id;
@@ -74,7 +74,7 @@ exports.save_edit = function(req,res){
     });
 };
 
-exports.destroy= function(req,res){
+exports.delete_employee= function(req,res){
           
      var id = req.params.id;
     
