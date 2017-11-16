@@ -2,7 +2,7 @@
 
         <div class="page-data">
          <div class="data-btn">
-                <a class="a-inside add" href="../employees/empadd">Add</a>
+                <a class="a-inside add" href="../bloodbanks/add">Add</a>
                 
          </div>
          <div class="data-table">
@@ -10,12 +10,10 @@
                 <tr>
                     <th width="50px">No</th>
                     <th>ID</th>
-                    <th>BNO</th>
                     <th>Name</th>
-                    <th>Address</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Position</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                
                     <th width="120px">Action</th>
                 </tr>
                                
@@ -26,16 +24,13 @@
                 <tr>
                     <td><%=(i+1)%></td>
                     <td><%=data[i].id%></td>
-                    <td><%=data[i].bno%></td>
                     <td><%=data[i].name%></td>
-                    <td><%=data[i].address%></td>
-                    <td><%=data[i].email%></td>
-                    <td><%=data[i].phone%></td>
-                    <td><%=data[i].position%></td>
+                    <td><%=data[i].type%></td>
+                    <td><%=data[i].amount%></td>
                     <td>
-                        <a class="a-inside edit" href="../employees/update/<%=data[i].id%>">Edit</a>
+                        <a class="a-inside edit" href="../bloodbanks/edit/<%=data[i].id%>">Edit</a>
                        
-                        <a class="a-inside delete" href="../employees/delete/<%=data[i].id%>">Delete</a>
+                        <a class="a-inside delete" href="../bloodbanks/delete/<%=data[i].id%>">Delete</a>
                        
                     </td>
                 </tr>

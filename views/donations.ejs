@@ -2,20 +2,22 @@
 
         <div class="page-data">
          <div class="data-btn">
-                <a class="a-inside add" href="../employees/empadd">Add</a>
+                <a class="a-inside add" href="../donations/add">Add</a>
                 
          </div>
          <div class="data-table">
             <table border="1" cellpadding="7" cellspacing="7">
                 <tr>
                     <th width="50px">No</th>
-                    <th>ID</th>
-                    <th>BNO</th>
-                    <th>Name</th>
-                    <th>Address</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Position</th>
+                    <th>Id</th>
+                    <th>Code</th>
+                    <th>Bloodbank</th>
+                    <th>Donor Id</th>
+                    <th>Type</th>
+                    <th>Cost</th>
+                    <th>Amount</th>
+                    
+                
                     <th width="120px">Action</th>
                 </tr>
                                
@@ -26,16 +28,17 @@
                 <tr>
                     <td><%=(i+1)%></td>
                     <td><%=data[i].id%></td>
-                    <td><%=data[i].bno%></td>
-                    <td><%=data[i].name%></td>
-                    <td><%=data[i].address%></td>
-                    <td><%=data[i].email%></td>
-                    <td><%=data[i].phone%></td>
-                    <td><%=data[i].position%></td>
+                    <td><%=data[i].code%></td>
+                    <td><%=data[i].bloodbank%></td>
+                    <td><%=data[i].donor_id%></td>
+                    <td><%=data[i].type%></td>
+                    <td><%=data[i].cost%></td>
+                    <td><%=data[i].amount%></td>
+                    
                     <td>
-                        <a class="a-inside edit" href="../employees/update/<%=data[i].id%>">Edit</a>
+                        <a class="a-inside edit" href="../donations/edit/<%=data[i].id%>">Edit</a>
                        
-                        <a class="a-inside delete" href="../employees/delete/<%=data[i].id%>">Delete</a>
+                        <a class="a-inside delete" href="../donations/delete/<%=data[i].id%>">Delete</a>
                        
                     </td>
                 </tr>

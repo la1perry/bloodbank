@@ -1,0 +1,44 @@
+<%- include layouts/header.ejs %>
+
+        <div class="page-data">
+            
+            <form method="post" action="/issues/add">
+                <table cellpadding="11">
+                        <tr>
+                                <td class="label">Issue #</td><td>: <input type="text" name="id" required></td>
+                             </tr>
+               
+                 <tr>
+                        <td class="label">Bloodbank</td><td>: <input type="text" name="bloodbank" required></td>
+                     </tr>
+            
+                  <tr>
+                    <td class="label">Hospital</td><td>: <input type="text" name="hospital" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label">Type</td><td>: <input type="text" name="type" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label">Amount</td><td>: <input type="text" name="amount" required></td>
+                 </tr>
+                 <tr>
+                        <td class="label">Cost</td><td>: <input type="text" name="cost" required></td>
+                     </tr>
+                 <tr>
+                    <td class="label">Date</td><td>: <input type="text" name="date" required></td>
+                 </tr>
+                 <tr>
+                        <td class="label">Order #</td><td>: <input type="text" name="order_num" required></td>
+                     </tr>
+                 <tr>
+                    <td class="label"></td>
+                    <td>
+                        &nbsp; <input type="submit" name="submit" value="Save">
+                        <a class="a-inside delete" href="../issues/cancel">Cancel</a>                    </td>
+                 </tr>
+                </table>
+            </form>
+            
+        </div>
+        
+<%- include layouts/footer.ejs %>

@@ -15,13 +15,21 @@ body {
   
 
   header ul{
+      background-color:rgb(133, 33, 33);
 display:flex;
 flex-direction:row;
 list-style-type: none;
+padding-top:.5rem ;
+padding-bottom:.5rem ;
 
   }
   header li{
-flex-basis:15%;
+flex-basis:12%;
+
+  }
+  li a {
+    color:white;
+    text-decoration:none;
   }
   #wrapper{
       
