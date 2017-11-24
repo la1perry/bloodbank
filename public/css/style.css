@@ -31,6 +31,23 @@ flex-basis:12%;
     color:white;
     text-decoration:none;
   }
+  .second{
+      background-color: rgb(6, 15, 54)
+  }
+  .second li a {
+font-size: .8rem;
+  }
+  .second li:first-of-type{
+      flex-basis:12%
+  }
+  .second li{
+      flex-basis:20%;
+      text-align: center;
+
+  }
+  .second li:last-of-type{
+      flex-basis:28%
+  }
   #wrapper{
       
       margin-top:30px;
@@ -48,7 +65,7 @@ flex-basis:12%;
       
       padding:2px;
       padding-left:40px;
-      background:#4e65a3;color:#FEFFFD;
+      background:#56c78e;color:#FEFFFD;
   }
   .data-btn{padding-left:8px}
   .data-btn button{

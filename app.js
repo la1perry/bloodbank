@@ -7,12 +7,12 @@ const donors=require('./routes/donors');
 const employees=require('./routes/employees');
 const hospitals=require('./routes/hospitals');
 const bloodbanks=require('./routes/bloodbanks');
-const orders=require('./routes/orders');
-const issues=require('./routes/issues');
-const donations=require('./routes/donations');
+
+
 
 var app=express()
 var connection=require('express-myconnection');
+
 
 app.set('port',process.env.PORT|| 8000);
 app.set('views', path.join(__dirname,'views'));
@@ -102,20 +102,8 @@ app.post('/donations/edit/:id', donations.save_edit);
 app.get('/donations/back',donations.back);
 app.get('/donations/delete/:id',donations.delete);
 
-app.get('/bloodsearch',bloodsearch.search);
-app.get('/donorsearch',donorsearch.search);
-app.get('/ordersearch',ordersearch.search);
-app.get('/bulksearch', bulksearch.search);
-app.get('/issuesearch', issuesearch.search);
-
-
-
-// app.get('/employees/delete_employee/:id',employees.delete_employee);
-
-// app.get('/employees/remove/:id', employees.remove_employee);
-// app.get('/employees/change/:id', employees.change);
-// app.get('/employees/back', employees.back);
-// app.post('/employees/edit/:id', employees.save_edit);
+app.get('/bloodsearch',bloodsearch.searchbytype);
+app.post('/bloodsearch',bloodsearch.searchbytype)
 
 app.use(app.router);
 http.createServer(app).listen(app.get('port'), function(){
