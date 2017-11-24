@@ -102,7 +102,7 @@ app.post('/donations/edit/:id', donations.save_edit);
 app.get('/donations/back',donations.back);
 app.get('/donations/delete/:id',donations.delete);
 
-// app.get('/employees/edit/:id',employees.edit_employee);
+app.get('/bloodsearch',ordersearch.search);
 // app.get('/employees/delete_employee/:id',employees.delete_employee);
 
 // app.get('/employees/remove/:id', employees.remove_employee);
@@ -114,44 +114,3 @@ app.use(app.router);
 http.createServer(app).listen(app.get('port'), function(){
     console.log('listening at'+app.get('port'));
 });
-
-// let connection=mysql.createConnection({
-//     host: 'localhost',
-//     user:'root',
-//     password:'',
-//     database:'bloodbank',
-//     port:'3306',
-// //   connectTimeout:90000,
-// //   acquireTimeout:60000, 
-// //   connectionLimit:15
-  
-// });
-
-// connection.connect(function(err){
-//     if(err) throw err;
-//     console.log('connected');
-//     let sql="INSERT INTO donors VALUES(5,'Bob Belcher','m', 42,'425 apple rd','343-344-2423')";
-//     connection.query(sql, function(err,result){
-//         console.log('inserted');
-//     });
-//     });
-
-
-// function getData(){
-
-// connection.connect();
-// connection.query('Select * FROM donors', function(err, rows){
-//     if(err) throw err;
-//     console.log(rows);
-// })
-// };
-// getData();
-
-
-
-// connection.connect(function(err){
-// if(err){
-//     return console.error('error: ', err.message);
-// }
-// console.log('connected to mysql server');
-// });
