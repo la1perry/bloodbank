@@ -102,7 +102,14 @@ app.post('/donations/edit/:id', donations.save_edit);
 app.get('/donations/back',donations.back);
 app.get('/donations/delete/:id',donations.delete);
 
-app.get('/bloodsearch',ordersearch.search);
+app.get('/bloodsearch',bloodsearch.search);
+app.get('/donorsearch',donorsearch.search);
+app.get('/ordersearch',ordersearch.search);
+app.get('/bulksearch', bulksearch.search);
+app.get('/issuesearch', issuesearch.search);
+
+
+
 // app.get('/employees/delete_employee/:id',employees.delete_employee);
 
 // app.get('/employees/remove/:id', employees.remove_employee);
